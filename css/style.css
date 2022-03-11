@@ -40,7 +40,7 @@ main .start-logo {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 500px;
+  height: 500px;/*高さを60vhから変更しました*/
   width: 100%; 
   padding-top: 250px;
   padding-left: 100px;
