@@ -1,0 +1,1546 @@
+/*---------------------------------------------------
+全体構造
+-------------------------------------------------------*/
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  font-family: 'Noto Sans JP','ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/*---------------------トップページ以外のメイン画面-----------------------*/
+#music-page main .start-logo {
+  background-image: url(../images/music-image.jpg);
+}
+#access-page main .start-logo {
+  background-image: url(../images/access-image.jpg);
+}
+#star-page main .start-logo {
+  background-image: url(../images/stargazing-image.jpg);
+}
+#room-page main .start-logo {
+  background-image: url(../images/guestroom-image.jpg);
+}
+#food-page main .start-logo {
+  background-image: url(../images/cuisine-image.jpg);
+}
+#wedding-page main .start-logo {
+  background-image: url(../images/wedding-image.jpg);
+}
+#staff-page main .start-logo {
+  background-image: url(../images/concierge-image.jpg); 
+}
+main .start-logo {
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 60vh;
+  width: 100%; 
+  padding-top: 250px;
+  padding-left: 100px;
+  margin-bottom: 100px;
+  background-color: #7B90D2;
+}
+main .start-logo h2 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+main .start-logo p {
+  font-size: 20px;
+}
+/*----------------------------------------------------------------------------------------------------------
+複数ページのコンセプト（共通記述）
+--------------------------------------------------------------------------------------------------------------*/
+/*-----------メインページ以外のコンセプト----------------------------------------------------------------------------*/
+#room-page main .room-p,
+#food-page main .food-p, 
+#star-page main .star-c,
+#wedding-page main .wedding-p,
+#music-page main .music-p {
+  margin-bottom: 100px;
+  text-align: center;
+}
+#room-page main .room-p img,
+#food-page main .food-p img,
+#star-page main .star-c img,
+#wedding-page main .wedding-p img,
+#music-page main .music-p img,
+#staff-page main .staff-p img {
+  margin-bottom: 20px;
+}
+#room-page main h3,
+#food-page main h3,
+#star-page main h3,
+#wedding-page main h3,
+#music-page main h3,
+#staff-page main .staff-p h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 55px;
+  position: relative;
+}
+#room-page main h3:before,
+#food-page main h3:before,
+#star-page main h3:before,
+#wedding-page main h3:before,
+#music-page main h3::before,
+#music-page main .record h5::before,
+#staff-page main h3::before {
+  display: inline-block;
+  position: absolute;
+  content: '';
+    bottom: -25px; /*下線の上下の位置*/
+    left: 50%;
+    width: 60px; /*下線の幅*/
+    height: 2px; /*下線の太さ*/
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%); /*位置の調整*/
+    background-color: #CAAD5F; /*下線の色*/
+  }  
+  #room-page main .room-p p,
+  #food-page main .food-p p,
+  #star-page main .star-c,
+  #wedding-page main .wedding-p,
+  #music-page main .music-p,
+  #music-page main .record p,
+  #staff-page main .staff-p {
+    line-height: 2.2;
+  }
+/*-------------------------------------------------------------
+メインコンテンツ全体の幅（メイン画面抜いてインナーで囲んだ部分）
+---------------------------------------------------------------*/
+main .inner {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+/*---------------------------------------------------
+ここからヘッダー
+-------------------------------------------------------*/
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  justify-content: space-between;
+  z-index: 2;
+  background-color: #F6F4ED;
+  position: fixed;
+}
+header h1:hover {
+  opacity: 0.6;
+}
+header,
+header .left {
+  display: flex;
+  align-items: center;
+}
+header .left {
+  margin-left: 20px;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+header nav li {
+  margin-left: 30px;
+  padding-bottom: 10px;
+}
+header li a {
+  color: #000000;
+  font-size: 20px;
+}
+header .right a {
+  color: #ffffff;
+  font-size: 20px;
+}
+header .right {
+  background-color: #CAAD5F;
+  border-radius: 5px;
+  margin-right: 30px;
+  width: 180px;
+  height: 45px;
+}
+header .right a {
+  display: block;
+  line-height: 45px;
+  text-align: center;
+  font-weight: bold;
+}
+/*---------------------------------------------------
+ヘッダーここまで
+-------------------------------------------------------*/
+
+/*---------------------------------------------------
+ここからフッター
+-------------------------------------------------------*/
+footer {
+  background-color: #7B90D2;
+  color: #ffffff;
+}
+footer .footers {
+  width: 1120px;
+  height: 350px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+footer .adress h1 {
+  margin-bottom: 20px;
+}
+footer .adress h1:hover {
+  opacity: 0.5;
+}
+footer .adress {
+  margin: 0 80px 0 110px;
+}
+footer .adress p {
+  line-height: 24px;
+}
+footer .phone,
+footer .fax, 
+footer .sns {
+  display: flex;
+  align-items: center;
+}
+footer .phone,
+footer .fax {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+footer .phone i,
+footer .fax i,
+footer .sns i {
+  font-size: 30px;
+  margin-right: 20px;
+  color: #ffffff;
+}
+footer .fax {
+  margin-bottom: 50px;
+}
+footer .iine {
+  margin-right: 190px;
+}
+footer .sns i:hover {
+  color: #FFF492;
+}
+footer span {
+  height: 80px;
+  line-height: 80px;
+  display: block;
+  color: #000000;
+  text-align: center;
+  background-color: #ffffff;
+  font-size: 15px;
+}
+/*---------------------------------------------------
+フッターここまで
+-------------------------------------------------------*/
+
+/*---------------------------------------------------
+ここからトップページメイン
+-------------------------------------------------------*/
+/*------------------------------------------------------
+トップページメイン画面と上のロゴ
+----------------------------------------------------------*/
+.bx-wrapper {
+  box-shadow: none;
+  border: none;
+  left: 0;
+  background-color: transparent;
+  margin: 0;
+ }
+#top-page .main-images {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-bottom: 130px;
+}
+#top-page .top-image img{
+  width: 100%;
+  height: 100vh !important;
+  object-fit: cover;
+}
+#top-page .top-image {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+#top-page .main-logo img {
+  margin-bottom: 50px;
+}
+#top-page main .main-logo a {
+  color: #ffffff;
+  font-size: 50px;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+}
+/*プロモーションビデオの再生ボタンにカーソルを合わせた後*/
+#top-page main .main-logo a:hover {
+  color: #CAAD5F;
+}
+#top-page main .main-logo p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+}
+#top-page main .scroll {
+  text-align: center;
+  color: #ffffff;
+  padding-top: 90px;
+  padding-bottom: 10px;
+}
+#top-page main .scroll i {
+  font-size: 20px;
+}
+#top-page main .scroll-p {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------
+トップページメイン画面から下の記述
+-------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------
+トップページ共通記述(主に見出し)
+-----------------------------------------------*/
+#top-page main h4 {
+  font-size: 40px;
+  font-weight: bold;
+}
+/*----------------------aタグとそのホバー-----------------------------*/
+#top-page main .seestar-p a,
+#top-page main .food a,
+#top-page main .hanayome a,
+#top-page main .room a {
+  border: 1px solid #000000;
+  border-radius: 50px;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+#top-page main .seestar-p a:hover,
+#top-page main .food a:hover,
+#top-page main .hanayome a:hover,
+#top-page main .room a:hover,
+#top-page main .stars a:hover,
+#top-page main .access a:hover,
+#top-page main .yoyaku a:hover {
+  color: #ffffff;
+  background-color: #CAAD5F;
+  border: 1px solid #CAAD5F;
+}
+/*------------------------------トップページコンテンツ見出し-------------------------------------*/
+/*それぞれのh4にポジションrelativeをかけています。*/
+#top-page main .food h4:before,
+#top-page main .room h4:before {
+  display: inline-block;
+  position: absolute;
+  content: '';
+    bottom: -40px; /*下線の上下の位置*/
+    left: 50%;
+    width: 70px; /*下線の幅*/
+    height: 2px; /*下線の太さ*/
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%); /*位置の調整*/
+    background-color: #CAAD5F; /*下線の色*/
+  }  
+/*------------------------------------------------------------
+コンセプト
+----------------------------------------------------------------*/
+#top-page main .top-logo,
+#top-page main h3,
+#top-page main .hiragana,
+#top-page main .consept {
+  text-align: center;
+}
+#top-page main .top-logo {
+  margin-bottom: 10px;
+}
+#top-page main h3 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#top-page main .hiragana {
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+#top-page main .consept {
+  line-height: 35px;
+  margin-bottom: 20px;
+}
+/*-----------------------------------------------------------------------
+３つの星が並んだセクション
+-------------------------------------------------------------------------*/
+#top-page main .stars {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 170px;
+}
+#top-page main .stars img {
+  margin-bottom: 30px;
+}
+#top-page main .stars a {
+  border: 1px solid #000000;
+  border-radius: 50px;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  width: 220px;
+  height: 50px;
+  margin: 0 auto;
+}
+#top-page main .down-star {
+  margin-top: 80px;
+}
+/*----------------------------------------------------------------------------
+星を見るメインページ
+-----------------------------------------------------------------------------*/
+#top-page main .seestar {
+  padding: 0 40px;
+  margin-bottom: 140px;
+  display: flex;
+}
+/*-----------------見出し下の短い線-----------------------*/
+#top-page main .seestar h4 {
+  margin-bottom: 70px;
+  display: inline-block;
+}
+#top-page main .seestar h4::after {
+  display: block;
+  border-bottom: 2px solid #CAAD5F;
+  padding-top: 30px;
+  content: '';
+    width: 70px; /*下線の幅*/
+  }  
+/*-------------------------------------------*/
+#top-page main .seestar-p {
+  background-color: #F6F4ED;
+  height: 500px;
+  width: 500px;
+  padding: 90px;
+  position: relative;
+}
+#top-page main .seestar-p p {
+  line-height: 35px;
+  margin-bottom: 30px;
+}
+#top-page main .seestar img {
+  margin-left: -120px;
+}
+/*----------------------------------------------------------------------------
+料理メインページ
+-----------------------------------------------------------------------------*/
+#top-page main .food {
+  margin: 0 40px 70px; 
+}
+#top-page main .food h4 {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+}
+#top-page main .food p {
+  text-align: center;
+  line-height: 35px;
+  padding-bottom: 40px;
+  background-image: url(../images/top-cuisine-bg.png);
+}
+#top-page main .food .osara {
+  background-image: url(../images/top-cuisine.png);
+  background-repeat: no-repeat;
+  height: 590px;
+}
+#top-page main .food .foods {
+  margin-bottom: 80px;
+}
+
+/*----------------------------------------------------------------------------
+ウェディングメインページ
+-----------------------------------------------------------------------------*/
+#top-page main .hanayome {
+  display: flex;
+  justify-content: space-between;
+  background-image: url(../images/top-wedding-bg.png);
+  height: 620px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-bottom: 160px;
+}
+#top-page main .hanayome .left {
+  margin-top: 230px;
+  margin-left: 80px;
+}
+#top-page main .hanayome h4 {
+margin-bottom: 30px;
+}
+#top-page main .hanayome p {
+  line-height: 35px;
+  margin-bottom: 35px;
+}
+#top-page main .hanayome a {
+  margin: 0;
+}
+#top-page main .hanayome .right {
+  width: 600px;
+}
+#top-page main .hanayome .right img {
+  width: 570px;
+  height: 620px;
+}
+/*----------------------------------------------------------------------------
+ゲストルームメインページ
+-----------------------------------------------------------------------------*/
+#top-page main .room {
+  margin-bottom: 180px;
+}
+#top-page main .room h4 {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+}
+#top-page main .room p {
+  line-height: 35px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+#top-page main .room-f {
+  display: flex;
+  margin-bottom: 40px;
+}
+/*----------------------------------------------------------------------------
+snsメインページ
+-----------------------------------------------------------------------------*/
+#top-page main .content {
+  margin: 0 0 200px 40px;
+}
+#top-page main .content h5 {
+  font-size: 30px;
+}
+#top-page main .access h5,
+#top-page main .yoyaku h5 {
+  margin-bottom: 70px;
+  position: relative;
+}
+#top-page main .access h5:before,
+#top-page main .yoyaku h5:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -40px; /*下線の上下位置調整*/
+  display: inline-block;
+  width: 50px; /*下線の幅*/
+  height: 2px; /*下線の太さ*/
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translate(-50%); /*位置調整*/
+  background-color: #666666; /*下線の色*/
+}
+#top-page main .access a,
+#top-page main .yoyaku a {
+  font-size: 20px;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+#top-page main .content .text {
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#top-page main .content-f {
+  display: flex;
+  align-items: flex-start;
+}
+#top-page main .access {
+  width: 560px;
+  height: 350px;
+  background-image: url(../images/top-access.jpg);
+}
+
+#top-page main .yoyaku {
+  width: 560px;
+  height: 350px;
+  background-image: url(../images/top-reservation.jpg);
+}
+#top-page main .sns-f {
+  background-image: url(../images/top-follow.jpg);
+  background-repeat: no-repeat;
+  width: 1120px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+#top-page main .sns-f h5 {
+  margin-right: 40px;
+}
+#top-page main .sns-f i {
+  font-size: 25px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+#top-page main .sns-f .fa-facebook-f {
+  padding: 15px 20px;
+}
+#top-page main .sns-f i:hover {
+  background-color: #ffffff;
+  color: #C0C5C7;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------
+トップページメインここまで
+----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------------------
+アクセスページメインここから
+----------------------------------------------------------------------------------------------------------------------------------*/
+#access-page main .start-image img{
+  margin-bottom: 110px;
+}
+#access-page main {
+  margin-bottom: 200px;
+}
+#access-page main .inner {
+  text-align: center;
+}
+
+/*---------マップ------------*/
+#access-page main .map {
+  margin-left: 40px;
+  margin-bottom: 70px;
+}
+#access-page main .map iframe {
+  margin-bottom: 50px;
+  background-color: #CFFFD6;
+}
+#access-page main .map p {
+  font-size: 20px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+#access-page main .map a {
+  background-color: #CAAD5F;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 30px;
+}
+#access-page main .map .pdf {
+  text-align: center;
+}
+#access-page main .map i {
+  margin-right: 20px;
+  font-size: 25px;
+}
+/*---------------バスと駐車場の共通記述--------------------------*/
+#access-page main h3,
+#access-page main i {
+  color: #CAAD5F;
+}
+#access-page main i {
+  font-size: 45px;
+  margin-bottom: 25px;
+}
+#access-page main h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+#access-page main span{
+  margin-bottom: 40px;
+  display: block;
+}
+/*--------------バス--------------*/
+#access-page main .bus p {
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+#access-page main .bus-f {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#access-page main .bus-f h4 {
+  font-size: 20px;
+  line-height: 30px;
+  background-color: #DDDDDD;
+  width: 230px;
+  height: 90px;
+  padding: 15px 0;
+}
+#access-page main .takamori {
+  margin-right: 60px;
+}
+#access-page main .bus-f p {
+  font-size: 20px;
+  width: 230px;
+  height: 70px;
+  padding: 20px 0;
+  border-bottom: 1px solid;
+  margin-bottom: 50px;
+}
+#access-page main .bus-botan {
+  width: 440px;
+  background-color: #CAAD5F;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 0;
+  margin: 0 auto 50px;
+}
+#access-page main .bus-botan a {
+  line-height: 24px;
+  color: #ffffff;
+}
+/*--------------駐車場--------------*/
+#access-page main .parking .setumei {
+  margin-bottom: 30px;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------
+アクセスページメインここまで
+----------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------
+ゲストルームページメインここから
+----------------------------------------------------------------------------------------------------------------------------------*/
+#room-page main .start-image img{
+  margin-bottom: 80px;
+}
+/*-----------本館と新館---------------------------------------------------------------------------------------*/
+/*----幅の調整-------------------------------------------------------*/
+#room-page main .honkan,
+#room-page main .sinkan,
+#room-page main .fq {
+  margin-left: 40px;
+  width: 1120px;
+}
+/*行間や文字に関する記述------------------------------------------------*/
+#room-page main .honkan p,
+#room-page main .sinkan p {
+  line-height: 2.2;
+}
+#room-page main .honkan h4,
+#room-page main .sinkan h4 {
+  font-size: 30px;
+  padding-left: 20px;
+  border-left: 5px solid #CAAD5F;
+  margin-bottom: 40px;
+}
+#room-page main .honkan-title p,
+#room-page main .sinkan-title p {
+  width: 900px;
+  margin-bottom: 90px;
+}
+#room-page main .two-room p {
+  width: 500px;
+  margin-bottom: 30px;
+}
+#room-page main .honkan h5,
+#room-page main .sinkan h5 {
+  font-size: 25px;
+  padding-left: 20px;
+  border-left: 5px solid #CAAD5F;
+  margin-bottom: 30px;
+}
+/*フレックスや位置に関する記述----------------------------------------------*/
+#room-page main .two-room {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 160px;
+}
+#room-page main .two-room img {
+  margin-bottom: 30px;
+}
+#room-page main .honkan-p,
+#room-page main .sinkan-p {
+  margin-bottom: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+#room-page main .sageru {
+  margin-bottom: 60px;
+}
+/*ホバーの記述-----------------------------------------------------------*/
+#room-page main .honkan-p a,
+#room-page main .sinkan-p a,
+#room-page main .two-room a{
+  display: block;
+  width: 230px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  color: #CAAD5F;
+  border: 2px solid #CAAD5F;
+  border-radius: 50px;
+}
+#room-page main .honkan-p a:hover,
+#room-page main .sinkan-p a:hover,
+#room-page main .two-room a:hover {
+  color: #ffffff;
+  background-color: #CAAD5F;
+}
+/*バックグラウンドイメージ---------------------------------------------------------*/
+#room-page main .room-bg1 {
+  background-image: url(../images/guestroom-bg1.jpg);
+}
+#room-page main .room-bg2 {
+  background-image: url(../images/guestroom-bg2.jpg);
+}
+#room-page main .room-bg2,
+#room-page main .room-bg1 {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 100px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+/*-よくある質問----------------------------------------------------------*/
+#room-page main .fq,
+#food-page main .fq {
+  padding: 110px 0 170px 0;
+}
+#room-page main .fq-bg,
+#food-page main .fq-bg {
+  background-color: #F6F4ED;
+}
+#room-page main .fq h4,
+#food-page main .fq h4 {
+  font-size: 40px;
+  margin-bottom: 90px;
+  text-align: center;
+  position: relative;
+}
+#room-page main .fq h4:before,
+#food-page main .fq h4:before {
+  display: inline-block;
+  position: absolute;
+  content: '';
+    bottom: -40px; /*下線の上下の位置*/
+    left: 50%;
+    width: 40px; /*下線の幅*/
+    height: 2px; /*下線の太さ*/
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%); /*位置の調整*/
+    background-color: #CAAD5F; /*下線の色*/
+  }  
+#room-page main .fq li,
+#food-page main .fq li {
+  list-style-type: none;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+#room-page main .fq h5,
+#food-page main .fq h5 {
+  line-height: 1.4;
+  font-size: 25px;
+  margin: 40px 0 30px 50px;
+}
+#room-page main .fq p,
+#food-page main .fq p {
+  line-height: 1.5;
+  margin-left: 50px;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------
+ゲストルームページメインここまで
+----------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------
+料理ページメインここから
+----------------------------------------------------------------------------------------------------------------------------------*/
+#food-page main .start-image img{
+  margin-bottom: 80px;
+}
+/*--------------------------セクション間のバックグラウンドイメージ------------------------------------*/
+#food-page main .dinner .food-bg1,
+#food-page main .morning .food-bg2,
+#food-page main .kids .food-bg3 {
+  width: 100%;
+  height: 280px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-bottom: 80px;
+}
+#food-page main .dinner .food-bg1 {
+  background-image: url(../images/cuisine-bg1.jpg);
+}
+#food-page main .morning .food-bg2 {
+  background-image: url(../images/cuisine-bg2.jpg);
+}
+#food-page main .kids .food-bg3 {
+  background-image: url(../images/cuisine-bg3.jpg);
+}
+/*-------------------------料理のバックグラウンドカラー----------------------------------*/
+#food-page main .dinner .ryouri,
+#food-page main .morning .ryouri {
+  background-color: #f1daa8;
+  padding: 50px 0;
+  margin-bottom: 20px;
+}
+#food-page main .morning .ryouri {
+  background-color: #ece4c5;
+  padding: 50px 0;
+  margin-bottom: 20px;
+}
+/*-------------------------料理のフレックスや小見出しなど----------------------------------*/
+#food-page main .ryouri .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#food-page main .top,
+#food-page main .down {
+  display: flex;
+  justify-content: space-between;
+}
+#food-page main .top {
+  margin-bottom: 20px;
+}
+#food-page main h6,
+#food-page main .dinner p,
+#food-page main .morning p {
+  text-align: center;
+}
+#food-page main h6 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#food-page main .dinner p,
+#food-page main .morning p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------
+
+---見出しのボーダー線-------------------------------------------------------------------こんな感じの見出し
+
+-------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------見出し---------------------------------------*/
+#food-page main .dinner h4,
+#food-page main .morning h4,
+#food-page main .kids h4,
+#star-page main .tour h4,
+#star-page main .sanka h4,
+#wedding-page main h4,
+#music-page main h4,
+#staff-page main h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+#food-page main .dinner h4 span,
+#food-page main .morning h4 span,
+#food-page main .kids h4 span,
+#star-page main .tour h4 span,
+#star-page main .sanka h4 span,
+#wedding-page main h4 span,
+#music-page main h4 span,
+#staff-page main h4 span {
+  font-size: 40px;
+  margin-right: 20px;
+}
+#food-page main .dinner .midasi,
+#food-page main .morning .midasi,
+#food-page main .kids .midasi,
+#star-page main .tour .midasi,
+#star-page main .sanka .midasi,
+#wedding-page main .midasi,
+#staff-page main .midasi {
+  margin-bottom: 60px;
+}
+/*--------------------------------------------------------------------*/
+#food-page main .dinner h4,
+#food-page main .morning h4,
+#food-page main .kids h4,
+#star-page main .tour h4,
+#star-page main .sanka h4,
+#wedding-page main h4,
+#music-page main h4,
+#staff-page main h4 {
+  display: flex;
+  align-items: center; /* 垂直中心 */
+}
+/*---------------------------------------------
+左の線の長さ
+---------------------------------------------*/
+#food-page main .dinner h4:before,
+#food-page main .morning h4::before,
+#food-page main .kids h4:before,
+#star-page main .tour h4:before,
+#star-page main .sanka h4:before,
+#wedding-page main h4:before,
+#music-page main h4::before,
+#staff-page main h4::before {
+  border-top: 3px solid;
+  content: "";
+  width: 20px; /* 線の長さ */
+  color: #CAAD5F;
+}
+/*---------------------------------------------
+右の線の長さ
+---------------------------------------------*/
+#food-page main .dinner h4:after,
+#food-page main .morning h4:after,
+#food-page main .kids h4:after,
+#star-page main .tour h4:after,
+#star-page main .sanka h4:after,
+#wedding-page main .plan h4:after,
+#wedding-page main .hoshimae h4:after,
+#music-page main .classical h4::after,
+#music-page main .record h4::after,
+#staff-page main h4::after {
+  border-top: 3px solid;
+  content: "";
+  color: #CAAD5F;
+}
+#food-page main .dinner h4:after{
+  width: 650px; /* 線の長さ */
+}
+#food-page main .morning h4:after {
+  width: 610px; /* 線の長さ */
+}
+#food-page main .kids h4:after {
+  width: 630px; /* 線の長さ */
+}
+#star-page main .tour h4:after {
+  width: 750px; /* 線の長さ */
+}
+#star-page main .sanka h4:after {
+  width: 740px; /* 線の長さ */
+}
+#wedding-page main .plan h4:after {
+  width: 560px; /* 線の長さ */
+}
+#wedding-page main .hoshimae h4:after {
+  width: 740px; /* 線の長さ */
+}
+#music-page main .classical h4::after {
+  width: 513px; /* 線の長さ */
+}
+#music-page main .record h4::after {
+  width: 580px; /* 線の長さ */
+}
+#staff-page main h4::after {
+  width: 840px; /* 線の長さ */
+}
+/*----------------------------------------------------*/
+#food-page main .dinner h4:before,
+#food-page main .morning h4:before,
+#food-page main .kids h4:before,
+#star-page main .tour h4:before,
+#star-page main .sanka h4:before,
+#wedding-page main h4:before,
+#music-page main h4::before,
+#staff-page main h4::before {
+  margin-right: 20px; /* 文字の右隣 */
+}
+#food-page main .dinner h4:after,
+#food-page main .morning h4:after,
+#food-page main .kids h4:after,
+#star-page main .tour h4:after,
+#star-page main .sanka h4:after,
+#wedding-page main h4:after,
+#music-page main h4::after,
+#staff-page main h4::after {
+  margin-left: 20px; /* 文字の左隣 */
+}
+/*-----------------------------------メニュー注意書き-------------------------------------------------*/
+#food-page main .tyuui {
+  text-align: right;
+  width: 1200px;
+  margin: 0 auto 80px;
+}
+/*---------------------------------お子様メニュー---------------------------------------------------*/
+#food-page main .kids {
+  margin-bottom: 160px;
+}
+#food-page main .kids-f {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+#food-page main .kids img {
+  margin-bottom: 30px;
+}
+#food-page main .kids h5 {
+  font-size: 20px;
+  padding-left: 20px;
+  border-left: 5px solid #CAAD5F;
+  margin-bottom: 20px;
+}
+#food-page main .kids p {
+  line-height: 2.1;
+}
+/*-----------------------------------------------------------
+よくある質問のCSSは820行目あたりのゲストルームのCSSとまとめました。
+--------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------
+料理ページメインここまで
+----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------------------
+星を見るページメインここから
+----------------------------------------------------------------------------------------------------------------------------------*/
+#star-page main {
+  margin-bottom: 200px;
+}
+/*----------------------------------------------------------
+h4のCSSは935行目あたりの料理のCSSとまとめました。
+------------------------------------------------------------*/
+/*--------------------------ツアー-------------------------(ミュージックページともまとめています。)-------*/
+#star-page main .premier {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+#star-page main .premier-p,
+#music-page main .premier-p {
+  margin: 40px 0 0 40px;
+  width: 370px;
+}
+#star-page .tour h5,
+#music-page main .premier-p h5 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  width: 370px;
+  padding-left: 20px;
+  border-left: 5px solid #CAAD5F;
+}
+#star-page main .premier-p .main-p,
+#music-page main .premier-p .main-p {
+  line-height: 2.2;
+  margin-bottom: 30px;
+}
+#star-page main .premier-p .irotuki,
+#music-page main .premier-p .irotuki {
+  font-size: 18px;
+  color: #CAAD5F;
+  margin-bottom: 20px;
+}
+#star-page main .premier-p .mini-p {
+  font-size: 15px;
+  line-height: 1.3;
+}
+#star-page .tour {
+  margin-bottom: 90px;
+}
+#star-page main .sageru {
+  margin-bottom: 70px;
+}
+
+/*----------------------------------参加方法--------------------------------------------*/
+
+#star-page main .goriyou {
+  text-align: center;
+}
+#star-page main .goriyou i {
+  color: #CAAD5F;
+  font-size: 45px;
+  margin-bottom: 25px;
+}
+#star-page main .goriyou h5 {
+  color: #CAAD5F;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+#star-page main .goriyou span {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 10px;
+}
+#star-page main .goriyou .waku {
+  width: 680px;
+  border: 3px solid #CAAD5F;
+  padding: 20px 0 20px 0;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+/*----------------------------------料金表-------------------------------------------*/
+
+#star-page main .ryoukin {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1080px;
+  margin: 0 auto;
+}
+#star-page main .ryoukin h6 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+#star-page main .ryoukin th {
+  line-height: 2;
+  text-align: center;
+  background-color: #637080;
+  color: #ffffff;
+  font-weight: normal;
+  padding: 25px;
+  width: 260px;
+  border: 1px solid #bbb;
+  border-top: none;
+}
+#star-page main .ryoukin th span {
+  border-bottom: none;
+}
+#star-page main .ryoukin th img {
+  margin-left: 10px;
+  vertical-align: baseline;
+}
+#star-page main .ryoukin td {
+  font-size: 20px;
+  width: 250px;
+  text-align: center;
+  border: 1px solid #bbb;
+  border-right: none;
+}
+
+#star-page main .ryoukin li {
+  list-style-type: none;
+  line-height: 1.8;
+}
+#star-page main .ryoukin ul {
+  margin-top: 30px;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------
+星を見るページメインここまで
+----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------------------
+ウェディング情報ページメインここから
+----------------------------------------------------------------------------------------------------------------------------------*/
+
+#wedding-page main .youtube-p,
+#music-page main .youtube-p {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+#wedding-page main {
+  margin-bottom: 200px;
+}
+#wedding-page main .wedding-video a {
+  display: block;
+  text-align: center;
+  font-size: 90px;
+  color: #ffffff;
+  line-height: 580px;
+ }
+ #wedding-page main .wedding-video a:hover {
+   color: #CAAD5F;
+ }
+ #wedding-page main .wedding-video .video-c {
+   background-image: url(../images/wedding-video.jpg);
+   width: 1200;
+   height: 580px;
+   margin-bottom: 20px;
+ }
+/*--------------星前式-------------------------*/
+#wedding-page main .hoshimae {
+  margin-bottom: 100px;
+}
+#wedding-page main .tegami {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 40px;
+}
+#wedding-page main .tegami-p {
+  background-color: #F7F3EC;
+  padding: 40px 50px;
+  margin-left: -70px;
+  margin-top: 50px;
+  height: 390px;
+  width: 590px;
+  line-height: 2.1;
+}
+#wedding-page main .tegami-p span {
+  display: block;
+  margin-top: 20px;
+  text-align: right;
+}
+/*----------------プラン----------------------*/
+#wedding-page main .plan {
+  text-align: center;
+}
+#wedding-page main .plan i {
+  color: #CAAD5F;
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+#wedding-page main .plan h5 {
+  color: #CAAD5F;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+#wedding-page main .dress p,
+#wedding-page main .hudan p {
+  line-height: 1.8;
+  font-weight: lighter;
+}
+#wedding-page main .dress .eigo,
+#wedding-page main .hudan .eigo {
+  font-size: 12px;
+  margin-bottom:20px;
+}
+#wedding-page main .dress,
+#wedding-page main .hudan {
+  margin-bottom: 50px;
+}
+
+
+#wedding-page main .dress-f {
+  margin-left: 60px;
+  display: flex;
+  align-items: flex-start;
+}
+#wedding-page main .icon-f {
+  padding: 0 51px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#wedding-page main .icon-f img {
+  margin-bottom: 10px;
+}
+#wedding-page main .icon-top {
+  margin-bottom: 15px;
+}
+#wedding-page main .right {
+  background-color: #F7F3EC;
+  width: 640px;
+  height: 520px;
+  padding: 30px 60px;
+  margin-left: 30px;
+}
+
+/*-------------------------料金表の見出し-------------------------------*/
+
+#wedding-page main h6 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center; /* 垂直中心 */
+}
+#wedding-page main h6:after,
+#wedding-page main h6:before {
+  border-top: 1px dotted;
+  content: "";
+  color: #000000;
+}
+#wedding-page main h6:before  {
+  margin-right: 20px; /* 文字の右隣 */
+}
+#wedding-page main h6:after {
+  margin-left: 20px; /* 文字の左隣 */
+}
+#wedding-page main .okane {
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+#wedding-page main .okane span {
+  font-size: 35px;
+  font-weight: bold;
+}
+#wedding-page main .youbi {
+  margin-bottom: 40px;
+}
+/*--------------------------プライスとコンテンツそれぞれの見出しの線の長さ------------------------------*/
+#wedding-page main .contents:after,
+#wedding-page main .contents:before {
+  width: 181px; /* 線の長さ */
+}
+#wedding-page main .price:after ,
+#wedding-page main .price:before {
+  width: 210px; /* 線の長さ */
+}
+/*---------------------------------------それぞれのプランのマージン---------------------------------------------------*/
+#wedding-page main .hyaku {
+  margin-bottom: 100px;
+}
+#wedding-page main .hati {
+  margin-bottom: 80px;
+}
+/*---------------------------------------------------別サイトへ飛ぶ--------------------------------------------------------*/
+
+
+#wedding-page main .go-site {
+  width: 440px;
+  background-color: #CAAD5F;
+  font-size: 16px;
+  padding: 10px 90px;
+  margin: 0 auto 50px;
+}
+#wedding-page main .go-site a {
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+#wedding-page main .go-site:hover {
+  opacity: 0.6;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------
+ウェディング情報ページメインここまで
+----------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------
+ミュージックページメインここから
+----------------------------------------------------------------------------------------------------------------------------------*/
+
+#music-page main {
+  margin-bottom: 200px;
+}
+#music-page main .record {
+  margin-bottom: 90px;
+}
+#music-page main .record img {
+  margin-bottom: 30px;
+}
+#music-page main .record .center {
+  text-align: center;
+}
+
+#music-page main .record .kaiten img {
+    animation: rotate-anime 6s linear infinite;
+  }
+  @keyframes rotate-anime {
+    0%  {transform: rotate(0);}
+    100%  {transform: rotate(360deg);}
+  }
+
+  #music-page main .record h5  {
+    font-size: 30px;
+    margin-bottom: 55px;
+    position: relative;
+  }
+  #music-page main .premier-p {
+    text-align: left;
+    margin-right: 40px;
+  }
+  #music-page main .premier-p .irotuki {
+    font-size: 14px;
+  }
+  #music-page main .premier {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+  #music-page main .midasi {
+    margin-bottom: 70px;
+  }
+  #music-page main .music-video a {
+   display: block;
+   text-align: center;
+   font-size: 90px;
+   color: #FFF;
+   line-height: 560px;
+  }
+  #music-page main .music-video a:hover {
+    color: #CAAD5F;
+  }
+  #music-page main .music-video .video-c {
+    background-image: url(../images/music-video-image.jpg);
+    width: 1200;
+    height: 560px;
+    margin-bottom: 20px;
+  }
+/*----------------------------------------------------------
+h4のCSSは935行目あたりの料理のCSSとまとめました。
+------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------------------
+ミュージックページメインここまで
+----------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------
+コンシェルジュページメインここから
+----------------------------------------------------------------------------------------------------------------------------------*/
+#staff-page main {
+  margin-bottom: 200px;
+}
+#staff-page main .staff-p {
+  margin-bottom: 120px;
+  text-align: center;
+}
+#staff-page main .plofile-f {
+  width: 900px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+  margin: 0 auto 70px;
+}
+#staff-page main .plofile-f h5 {
+  font-size: 40px;
+  font-weight: bold;
+  padding-left: 20px;
+  border-left: 5px solid #CAAD5F;
+  margin-bottom: 20px;
+  margin-left: -10px;
+}
+#staff-page main .plofile-f span {
+  margin-left: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#staff-page main .plo-q {
+  color: #CAAD5F;
+}
+#staff-page main .plofile-f p {
+  line-height: 1.8;
+}
+
+#staff-page main .plofile-p {
+  margin-left: 60px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------
+コンシェルジュページメインここまで
+----------------------------------------------------------------------------------------------------------------------------------*/
+.back-top {
+  position: fixed;
+  bottom: 3%;
+  right: 5%;
+  display: none;
+ }
+
+/*---------------------パララックス----------------------------*/
+ #top-page main .parallax {
+  opacity: 0;
+}
+#top-page main .parallax.on {
+  opacity: 1;
+}
